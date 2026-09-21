@@ -8,23 +8,33 @@
 
   <style>
     :root {
-      --member-color: #ffffff;
+      --member-color: #888888;
     }
 
     .profile-header h1 {
-      border-bottom: 4px solid #dddddd;
       display: inline-block;
       padding-bottom: 8px;
+      border-bottom: 4px solid #888888;
     }
 
-    .profile-accent {
-      border-color: #dddddd !important;
+    .favorite-title {
+      border-bottom-color: #888888;
+    }
+
+    .external-links a {
+      border-color: #888888;
+    }
+
+    .external-links a:hover {
+      background: #888888;
+      color: #ffffff;
     }
   </style>
 </head>
 
 <body>
 
+  <!-- Header -->
   <header class="site-header">
     <a href="index.html" class="site-logo">My fave</a>
 
@@ -35,6 +45,8 @@
     </button>
   </header>
 
+
+  <!-- Menu -->
   <nav class="menu-panel" id="menu-panel">
     <a href="index.html">TOP</a>
     <a href="wakana.html">松本わかな</a>
@@ -48,15 +60,21 @@
 
   <main class="profile-main">
 
+    <!-- Profile -->
     <section class="profile-header">
+
       <h1>松本わかな</h1>
-      <p class="profile-reading">まつもと わかな</p>
+
+      <p class="profile-reading">
+        まつもと わかな
+      </p>
 
       <div class="profile-info">
         <span>2007年9月1日</span>
         <span>アンジュルム</span>
         <span>ホワイト</span>
       </div>
+
     </section>
 
 
@@ -79,8 +97,13 @@
 
       </div>
 
-      <button class="carousel-arrow carousel-prev" type="button">‹</button>
-      <button class="carousel-arrow carousel-next" type="button">›</button>
+      <button class="carousel-arrow carousel-prev" type="button">
+        ‹
+      </button>
+
+      <button class="carousel-arrow carousel-next" type="button">
+        ›
+      </button>
 
       <div class="carousel-dots">
         <button class="carousel-dot active" type="button"></button>
@@ -89,6 +112,10 @@
       </div>
 
     </section>
+
+
+    <!-- Favorite -->
+    <h2 class="favorite-title">好きなところ</h2>
 
 
     <!-- Favorite 1 -->
@@ -102,7 +129,9 @@
         かくいう私も、その圧倒的な歌声に心を奪われたことがきっかけでわかにゃを好きになりました。<br>
       </div>
 
-      <button class="read-more" type="button">続きを読む</button>
+      <button class="read-more" type="button">
+        続きを読む
+      </button>
 
     </section>
 
@@ -121,7 +150,9 @@
         細やかな心遣いと熱心な取り組みの数々は、ファンを魅了してやまない彼女の大きな原動力となっています。<br>
       </div>
 
-      <button class="read-more" type="button">続きを読む</button>
+      <button class="read-more" type="button">
+        続きを読む
+      </button>
 
     </section>
 
@@ -138,7 +169,9 @@
         いつか私も食べたい。<br>
       </div>
 
-      <button class="read-more" type="button">続きを読む</button>
+      <button class="read-more" type="button">
+        続きを読む
+      </button>
 
     </section>
 
@@ -146,15 +179,24 @@
     <!-- External links -->
     <section class="external-links">
 
-      <a href="https://helloproject.com/angerme/wakana_matsumoto/" target="_blank" rel="noopener">
+      <a
+        href="https://helloproject.com/angerme/wakana_matsumoto/"
+        target="_blank"
+        rel="noopener">
         OFFICIAL SITE
       </a>
 
-      <a href="https://ameblo.jp/angerme-new/theme-10113863095.html" target="_blank" rel="noopener">
+      <a
+        href="https://ameblo.jp/angerme-new/theme-10113863095.html"
+        target="_blank"
+        rel="noopener">
         BLOG
       </a>
 
-      <a href="https://www.instagram.com/wakana_matsumoto.official/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noopener">
+      <a
+        href="https://www.instagram.com/wakana_matsumoto.official/?utm_source=ig_web_button_share_sheet"
+        target="_blank"
+        rel="noopener">
         INSTAGRAM
       </a>
 
@@ -185,11 +227,11 @@
     </section>
 
 
-    <!-- Navigation -->
+    <!-- Previous / Next -->
     <nav class="profile-navigation">
 
-      <a href="index.html">
-        ← TOP
+      <a href="roko.html">
+        ← 筒井澪心
       </a>
 
       <a href="mifu.html">
@@ -201,9 +243,15 @@
   </main>
 
 
+  <!-- Footer -->
   <footer class="site-footer">
-    <a href="#" class="top-link">↑ TOP</a>
+
+    <a href="#" class="top-link">
+      ↑ TOP
+    </a>
+
     <p>My fave</p>
+
   </footer>
 
 
