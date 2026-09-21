@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My fave</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Loading -->
+  <div id="loading-screen">
+    <div id="loading-number">0</div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <a href="index.html" class="site-logo">My fave</a>
+
+    <button class="menu-button" id="menu-button" aria-label="メニュー">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- Menu -->
+  <nav class="menu-panel" id="menu-panel">
+    <a href="index.html">TOP</a>
+    <a href="wakana.html">松本わかな</a>
+    <a href="mifu.html">川嶋美楓</a>
+    <a href="utano.html">里吉うたの</a>
+    <a href="roko.html">筒井澪心</a>
+  </nav>
+
+  <div class="menu-overlay" id="menu-overlay"></div>
+
+  <main>
+
+    <!-- Intro -->
+    <section class="intro">
+      <h1>My fave</h1>
+
+      <p>
+        ハロプロオタクの私が、ひたすら推しについて語るサイトになってます。<br>
+        <br>
+        このWebサイトは、ハロープロジェクトのオタクが個人で制作・管理をしている推しを応援する非公式ファンサイトです。<br>
+        各種関係会社様とは一切関係ございません。
+      </p>
+    </section>
+
+
+    <!-- Members -->
+    <section class="members">
+
+      <a href="wakana.html" class="member-card member-wakana">
+        <img src="IMG_6017.jpeg" alt="松本わかな">
+        <h2>松本わかな</h2>
+        <p>アンジュルム</p>
+      </a>
+
+      <a href="mifu.html" class="member-card member-mifu">
+        <img src="IMG_6015.jpeg" alt="川嶋美楓">
+        <h2>川嶋美楓</h2>
+        <p>Juice=Juice</p>
+      </a>
+
+      <a href="utano.html" class="member-card member-utano">
+        <img src="IMG_6013.jpeg" alt="里吉うたの">
+        <h2>里吉うたの</h2>
+        <p>BEYOOOOONDS</p>
+      </a>
+
+      <a href="roko.html" class="member-card member-roko">
+        <img src="IMG_6008.jpeg" alt="筒井澪心">
+        <h2>筒井澪心</h2>
+        <p>OCHA NORMA</p>
+      </a>
+
+    </section>
+
+
+    <!-- Otaku no Hitokoto -->
+    <section class="otaku-comment">
+      <h2>オタクの一言</h2>
+
+      <div class="comment-card">
+        <p id="random-comment">
+          ハロプロって最高
+        </p>
+
+        <button id="random-button" type="button">
+          更新
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <a href="#" class="top-link">↑ TOP</a>
+    <p>My fave</p>
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
