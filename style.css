@@ -1,0 +1,589 @@
+/* =========================
+   My fave - common style
+   ========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: #333333;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    "Yu Gothic",
+    "YuGothic",
+    Meiryo,
+    sans-serif;
+  line-height: 1.8;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+
+/* =========================
+   Loading
+   ========================= */
+
+#loading-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#loading-screen.hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+#loading-number {
+  font-size: 48px;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+}
+
+
+/* =========================
+   Header
+   ========================= */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  background: #F7ADC3;
+}
+
+.site-logo {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.menu-button {
+  width: 46px;
+  height: 46px;
+  padding: 10px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+}
+
+.menu-button span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  margin-left: auto;
+  background: #333333;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-button.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-button.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-button.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+
+/* =========================
+   Menu
+   ========================= */
+
+.menu-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2000;
+  width: 72%;
+  max-width: 360px;
+  height: 100vh;
+  padding: 100px 28px 40px;
+  background: #ffffff;
+  transform: translateX(100%);
+  transition: transform 0.4s ease;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.08);
+}
+
+.menu-panel.open {
+  transform: translateX(0);
+}
+
+.menu-panel a {
+  display: block;
+  padding: 18px 0;
+  border-bottom: 1px solid #eeeeee;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1500;
+  background: rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.menu-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* =========================
+   Main
+   ========================= */
+
+main {
+  width: min(100% - 32px, 1000px);
+  margin: 0 auto;
+}
+
+.intro {
+  padding: 70px 0 45px;
+  text-align: center;
+}
+
+.intro h1 {
+  margin: 0 0 25px;
+  font-size: clamp(38px, 10vw, 70px);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.intro p {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 14px;
+}
+
+
+/* =========================
+   Member cards
+   ========================= */
+
+.members {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 80px;
+}
+
+.member-card {
+  display: block;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.member-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.member-card h2 {
+  margin: 14px 14px 2px;
+  font-size: 18px;
+}
+
+.member-card p {
+  margin: 0 14px 16px;
+  color: #777777;
+  font-size: 13px;
+}
+
+
+/* =========================
+   Otaku comment
+   ========================= */
+
+.otaku-comment {
+  margin-bottom: 100px;
+}
+
+.otaku-comment > h2 {
+  margin: 0 0 18px;
+  font-size: 25px;
+  text-align: center;
+}
+
+.comment-card {
+  padding: 35px 22px;
+  border: 1px solid #eeeeee;
+  text-align: center;
+}
+
+.comment-card p {
+  min-height: 58px;
+  margin: 0 0 25px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+#random-button {
+  padding: 9px 28px;
+  border: 1px solid #333333;
+  background: #ffffff;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+#random-button:hover {
+  background: #333333;
+  color: #ffffff;
+}
+
+
+/* =========================
+   Footer
+   ========================= */
+
+.site-footer {
+  padding: 45px 20px;
+  background: #F7ADC3;
+  text-align: center;
+}
+
+.top-link {
+  display: inline-block;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 13px;
+}
+
+
+/* =========================
+   Page animation
+   ========================= */
+
+main {
+  animation: pageFadeIn 0.8s ease both;
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================
+   Profile page
+   ========================= */
+
+.profile-main {
+  padding-bottom: 70px;
+}
+
+.profile-header {
+  padding: 60px 0 30px;
+  text-align: center;
+}
+
+.profile-header h1 {
+  margin: 0;
+  font-size: clamp(30px, 8vw, 52px);
+}
+
+.profile-reading {
+  margin: 4px 0 15px;
+  color: #777777;
+  font-size: 13px;
+}
+
+.profile-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.profile-info span {
+  padding: 5px 12px;
+  border: 1px solid #dddddd;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+
+/* =========================
+   Carousel
+   ========================= */
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto 55px;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.carousel-slide {
+  min-width: 100%;
+}
+
+.carousel-slide img {
+  display: block;
+  width: 100%;
+  max-height: 650px;
+  object-fit: cover;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 22px;
+}
+
+.carousel-prev {
+  left: 12px;
+}
+
+.carousel-next {
+  right: 12px;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding-top: 14px;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #cccccc;
+  cursor: pointer;
+}
+
+.carousel-dot.active {
+  background: #333333;
+}
+
+
+/* =========================
+   Favorite sections
+   ========================= */
+
+.favorite-section {
+  margin-bottom: 55px;
+}
+
+.favorite-section h2 {
+  margin: 0 0 15px;
+  padding-left: 14px;
+  border-left: 4px solid var(--member-color, #333333);
+  font-size: 23px;
+}
+
+.favorite-text {
+  position: relative;
+}
+
+.favorite-text.collapsed {
+  max-height: 3.6em;
+  overflow: hidden;
+}
+
+.favorite-text.collapsed::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 55%;
+  height: 1.8em;
+  background: linear-gradient(to right, transparent, #ffffff 55%);
+}
+
+.read-more {
+  display: block;
+  margin: 12px 0 0 auto;
+  padding: 5px 14px;
+  border: 1px solid #cccccc;
+  background: #ffffff;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+
+/* =========================
+   External links
+   ========================= */
+
+.external-links {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin: 60px 0;
+}
+
+.external-links a {
+  display: block;
+  padding: 13px;
+  border: 1px solid var(--member-color, #333333);
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.external-links a:hover {
+  background: var(--member-color, #333333);
+  color: #ffffff;
+}
+
+
+/* =========================
+   YouTube
+   ========================= */
+
+.youtube-section {
+  margin: 60px 0;
+}
+
+.youtube-section h2 {
+  margin-bottom: 20px;
+  font-size: 23px;
+}
+
+.youtube-box {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 20px;
+}
+
+.youtube-box iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
+/* =========================
+   Previous / Next
+   ========================= */
+
+.profile-navigation {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 70px;
+}
+
+.profile-navigation a {
+  padding: 15px 10px;
+  border: 1px solid #dddddd;
+  text-align: center;
+  font-size: 13px;
+}
+
+.profile-navigation a:last-child {
+  grid-column: 2;
+}
+
+
+/* =========================
+   PC
+   ========================= */
+
+@media (min-width: 700px) {
+
+  .site-header {
+    padding: 0 40px;
+  }
+
+  main {
+    width: min(100% - 80px, 1100px);
+  }
+
+  .intro {
+    padding-top: 100px;
+  }
+
+  .members {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .member-card h2 {
+    font-size: 19px;
+  }
+
+  .external-links {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
